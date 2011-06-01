@@ -22,7 +22,7 @@
         <attr name="fillColor" format="color" />
         <attr name="strokeColor" format="color" />
         <attr name="radius" format="integer" />
-    </declare-styleable>    
+    </declare-styleable>      
     <declare-styleable name="TitleFlowIndicator">
         <attr name="titlePadding" format="integer" />
         <attr name="selectedColor" format="color" />
@@ -31,5 +31,8 @@
         <attr name="footerLineHeight" format="integer" />
         <attr name="footerColor" format="color" />
         <attr name="footerTriangleHeight" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="NumberFlowIndicator">
+      <attr name="numberColor" format="color"/> 
     </declare-styleable>    
 </resources>

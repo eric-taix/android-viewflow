@@ -26,7 +26,7 @@ public class ViewFlowExample extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		listView = (ListView) findViewById(R.id.menu);
-		String[] listeStrings = { "Circle indicator...", "Title indicator..." };
+		String[] listeStrings = { "Circle indicator...", "Title indicator...", "Number indicator..." };
 		listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listeStrings));
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			@Override
@@ -37,6 +37,9 @@ public class ViewFlowExample extends Activity {
 					break;
 				case 1:
 					startActivity(new Intent(ViewFlowExample.this, TitleViewFlowExample.class));
+					break;
+				case 2:
+					startActivity(new Intent(ViewFlowExample.this, NumberViewFlowExample.class));
 					break;
 				}
 			}

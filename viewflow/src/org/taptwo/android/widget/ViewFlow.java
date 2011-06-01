@@ -127,13 +127,6 @@ public class ViewFlow extends AdapterView<Adapter> {
 		mMaximumVelocity = configuration.getScaledMaximumFlingVelocity();
 	}
 
-	@Override
-	protected void onConfigurationChanged(Configuration newConfig) {
-		super.onConfigurationChanged(newConfig);
-		getViewTreeObserver().addOnGlobalLayoutListener(
-				orientationChangeListener);
-	}
-
 	public int getViewsCount() {
 		return mAdapter.getCount();
 	}
@@ -242,7 +235,7 @@ public class ViewFlow extends AdapterView<Adapter> {
 						scrollBy(Math.min(availableToScroll, deltaX), 0);
 					}
 				}
-				return true;
+				return false;
 			}
 			break;
 
@@ -337,7 +330,7 @@ public class ViewFlow extends AdapterView<Adapter> {
 						scrollBy(Math.min(availableToScroll, deltaX), 0);
 					}
 				}
-				return true;
+				return false;
 			}
 			break;
 
@@ -619,7 +612,7 @@ public class ViewFlow extends AdapterView<Adapter> {
 				.getLayoutParams();
 		if (p == null) {
 			p = new AbsListView.LayoutParams(
-					ViewGroup.LayoutParams.MATCH_PARENT,
+					ViewGroup.LayoutParams.FILL_PARENT,
 					ViewGroup.LayoutParams.WRAP_CONTENT, 0);
 		}
 		if (recycle)
